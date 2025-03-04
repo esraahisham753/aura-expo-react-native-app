@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
+import { Stack } from 'expo-router'
+import "../global.css"
 
-export default function App() {
+const RootLayout = () => {
   return (
-    <View style={styles.container}>
-      <Text>Aora!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <Stack>
+      <Stack.Screen name='index' options={{headerShown: false}}></Stack.Screen>
+    </Stack>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default RootLayout
